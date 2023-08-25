@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Donation" content="a donation page tohelp the less fortunate including street children">
+    <title>Donation Page</title>
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--start of heading image-->
+    <div class="container">
+        <div class="container-header">
+            <h1>DONATE NOW</h1>
+            <p>Every donation provides nutritious food for hungry <br>children and families.</p>
+        </div>
+    </div>
+    <!--End of heading image-->
+
+    <div class="donation-box">
+        <div class="donation-choice">
+           <button id="monthly-btn" class="active">💕Give Monthly</button>
+           <button id="once-btn">Give Once</button>
+        </div>
+    </div>
+    <div class="donation-currency-box">
+        <div class="donation-box-monthly">
+            <div class="donation-box-monthly-1">
+                <h2 id="message">Your Monthly Donation</h2>
+                <p id="text-el">You are about to become a Pure Active Love Organization monthly supporter</p>
+                <div class="country-curr-box">
+                    <div class="country-curr-box-1">
+                     <h3>Country</h3>
+                     <input type="text" id="Country-el" oninput="copyText()">
+                    </div>
+                    <div class="country-curr-box-2">
+                     <h3>Currency</h3>
+                     <select name="currency">
+                        <option value="Dollars">$ - Dollars</option>
+                       <!--  <option value="kenya Shillings">Kshs - Kenya Shillings</option> -->
+                     </select>
+                    </div>
+                </div>
+                <h2 id="Period-el">Make a monthly donation of:</h2>
+                <div class="donation-box-buttons">
+                    <button id="btn1">$ 5.00</button>
+                    <button id="btn2">$ 10.00</button>
+                    <button id="btn3">$ 20.00</button>
+                    <button id="btn4">$ 50.00</button>
+                </div>
+                <label for="dollar">Other Amount &#36;:</label>
+                <input type="number" placeholder="Other" min="0" id="Otherval" oninput="copyText()">
+                <p id="timer">
+                    <label for="duration">Duration Period: </label>
+                    <input type="number" placeholder="Enter donation period" required id="DonationField1" oninput="copyText()">
+                </p>    
+            </div>
+            <div class="donation-box-monthly-2">
+                <h2>What your donations buy us</h2>
+                <table>
+                    <tr>
+                    <th>Amount</th>
+                    <th>Education</th>
+                    <th>Food</th>
+                    <th>Protection</th>
+                    </tr>
+                    <tr id="data">
+                        <th>$5</th>
+                        <td>Buy 14 books for 2 children</td>
+                        <td>Buy 4 packets of flour</td>
+                        <td></td>
+                    </tr>
+                   <!--  <tr>
+                        <th>$10</th>
+                        <td>Buy 28 books for 4 children</td>
+                        <td>Buy 9 packets of flour</td>
+                        <td>Protect 1 child</td>
+                    </tr>
+                    <tr>
+                        <th>$20</th>
+                        <td>Buy 56 books for 8 children</td>
+                        <td></td>
+                        <td>Protect 2 children</td>
+                    </tr>
+                    <tr>
+                        <th>$50</th>
+                        <td>Buy 140 books for 20 children</td>
+                        <td>Buy 48 packets of flour</td>
+                        <td>Protect 5 children</td>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="message">
+        <h1>Send Us Your Contact Details</h1>
+        <form action="" method="post" id="detailForm">
+            <div class="info">
+            <label for="email">Email address *</label><br>
+            <input type="email" name="email" placeholder="e.g.example@gmail.com" autocomplete="on" required autofocus>
+            </div>
+            <div class="info2">
+            <input type="checkbox" id="one">
+            <label for="one"> Yes, I am happy for Pure Active Love Organization to use the personal information I share to send me communications about Pure Active Love Organization programmes, services, and events by email</label></div>
+            <div class="num">
+                <label for="number">Phone Number:</label><br>
+                <input type="tel" name="tel" placeholder="Enter your phone number" required>
+                <p>By providing your phone number you agree that Pure Active Love Organization <br>will use the personal information you share with us to send you information<br> about our programmes, services and events by SMS, telephone (voice) <br>and via messaging platforms i.e. WhatsApp.</p>
+            </div>
+            <div class="hidden-user-donation-choice">
+                    <input type="hidden" name="Country" placeholder="Country Selected" id="countryInp" required>
+                    <input type="hidden" name="Amount" placeholder="Amount Obtained from input fields" id="amountInp" required> <!-- amount obtained from buttons and Other Amount will be displayed here -->
+                    <input type="hidden" name="DonationPeriod" placeholder="Donation Period one would like to Donate" id="DonationField2" value="Monthly">
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+    <div class="payment-cards">
+        <h1>Your monthly donation</h1>
+        <p>Select your monthly payment method.</p>
+        <div class="payment-cards-btn">
+            <button><i class="fa fa-credit-card"></i> Credit/Debit Card</button>
+            <button>PayPal</button>
+            <button>Donate with  <i class="fa fa-google"></i>-Pay</button>
+            <button>Donate with  M-pesa</button>
+        </div>
+        <div class="mobilization-text">
+            <p>When you donate to the Pure Active Love Organization, your generosity is immediately put to work helping build a world with zero hunger.</p>
+            <p>You can help save lives during emergencies or give children nutritious meals in school. We can't do any of this without your support.</p>
+            <p class="action">Please donate now.</p>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

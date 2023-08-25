@@ -1,0 +1,70 @@
+*{margin:0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
+.container{width: 100%;}
+.container-header{width: 100%;color: #fff;padding: 30px;background: linear-gradient(rgba(0, 0, 0,0.7),rgba(0, 0, 0,0.7),rgba(230, 78, 114,0.7)),url(./Images/charitable.jpg);background-size: cover;background-position: center;height: 40vh;align-items: center;}
+.container-header h1{font-size: 3.5rem;font-weight: 800;margin-top: 2%;}
+.container-header p{font-size: 1.6rem;font-weight: 500;letter-spacing: .1rem;}
+
+.donation-box .donation-choice, .donation-currency-box{width: 90%;margin: auto;margin-top: 2%; background: #8080809d;border-radius: 10px; border-radius: 10px;display: flex;align-items: center;justify-content: space-between;font-weight: 400;padding:5px 10px;}
+.active{background:#e64e71;color: #fff;}
+.donation-box .donation-choice button:active{background:#e64e71;}
+.donation-box .donation-choice button{padding: 15px;width: 50%;border-radius: 10px;margin: 3px;font-size: 1.4rem;font-weight: 600;text-transform: uppercase;border: none;cursor: pointer;}
+.donation-box .donation-choice button:hover{background: #8080809d;}
+
+#timer{display: none;}
+.donation-currency-box{padding: 20px;}
+.donation-currency-box .donation-box-monthly{display: flex;justify-content: space-between;width: 100%;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1{width: 100%;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 h2{font-size: 2rem;margin: 1% 0%;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 p{font-size: 1.2rem;font-weight: bold;margin: 3% 0%;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-2{flex-basis: 70%;text-align: center;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 .country-curr-box{display: flex;align-items: center;margin-bottom: 10%;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 .country-curr-box .country-curr-box-1{margin-right: 10%;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 .country-curr-box .country-curr-box-2 select{width: 120%;padding: 10px;outline: none;font-size: 1.3rem;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 .donation-box-buttons button{padding:10px 20px;font-weight: bold; font-size: 1.4rem;margin:2% 2% 0%; cursor: pointer;border-radius: 5px;border: 1px solid #e64e71;background: #e64e71;color: #fff;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 .donation-box-buttons button:hover{background: #fff;color: #000;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 .donation-box-buttons{margin-bottom: 3%;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 label{font-size: 1.6rem;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 input{padding: 10px;border-radius: 5px;font-size: 1.4rem; outline: none;border: 1px solid #e64e71;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-1 input::placeholder{font-size: 1.4rem;font-weight: bold;}
+
+.donation-currency-box .donation-box-monthly .donation-box-monthly-2 h2{color: #e64e71;font-size:2rem;margin-bottom: 2%;}
+.donation-currency-box .donation-box-monthly .donation-box-monthly-2 table,th, td, tr{border: 1px solid #000;border-collapse:collapse ;padding: 10px;font-size: 1.2rem;}
+
+.message{width: 90%;margin: auto;background: #e64e71;margin-top: 2%;border-radius: 10px;color: #fff;padding: 20px;font-size: 1.3rem;}
+.message h1{font-size: 3rem;margin: 2% 0%;}
+.message form .info input{padding:15px 20px;width: 30%;outline: none;margin:1% 0% 2%;}
+.info2{display: flex;justify-content: space-between;align-items: center;margin-bottom: 2%;}
+.message form .info2 input{width: 30px;height: 30px;}
+.info2 label{margin-left: 2%;}
+.num input,.hidden-user-donation-choice input{padding:15px 20px;width: 30%;outline: none;margin:1% 0% 2%;}
+form button{margin: 2% 0%; width: 250px;padding: 15px 20px;border-radius: 25px;border: 2px solid #fff;color: #e64e71;font-size: 1.3rem;font-weight: 500;cursor: pointer;transition: .5s;}
+form button:hover{background: transparent;color: #fff;}
+
+.payment-cards{width: 90%; margin:2% auto;font-size: 1.2rem;flex-wrap: wrap;}
+.payment-cards-btn button{width: 250px;margin: 1%;padding: 15px 20px;border-radius: 10px;font-size: 1.3rem;background: #e64e71;cursor: pointer;font-weight: bold;color: #fff;border:none;}
+.payment-cards-btn button:hover{opacity: .7;}
+.payment-cards .mobilization-text{background: #8080809d;margin:2%;padding: 20px;line-height: 25px;}
+.payment-cards .mobilization-text .action{font-weight: bold;font-size: 1.5rem;margin: 1%;}
+
+
+@media(max-width:925px){
+    html{font-size: 80%;}
+    .donation-box-monthly{flex-direction: column;}
+    .donation-box-monthly-1{margin: auto;}
+    .donation-box-monthly .donation-box-monthly-2{margin-top: 2%;margin: auto;}
+}
+@media(max-width:588px){
+    html{font-size: 50%;}
+    .container-header h1{font-size: 3.5rem;font-weight: 800;margin-top: 15%;}
+    .donation-currency-box .donation-box-monthly .donation-box-monthly-1 .donation-box-buttons button{padding: 10px;}
+    .message form .info input, .num input{width: 100%;}
+    .donation-box-monthly-2 h2{margin-top: 4%;}
+    .payment-cards-btn button{width: 150px;}
+}
+@media(max-width:360px){
+    .donation-currency-box .donation-box-monthly .donation-box-monthly-1 .donation-box-buttons button{padding: 6px;margin: 1%;}
+    .payment-cards{text-align: center;}
+}
+@media(max-width:334px){
+    .donation-currency-box .donation-box-monthly .donation-box-monthly-1 .country-curr-box .country-curr-box-2 select{width: 100%;padding: 5px;font-size: 1rem}
+}
